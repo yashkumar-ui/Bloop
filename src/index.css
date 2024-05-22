@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+}
+
+.moveable-control-box .moveable-line,
+.moveable-control-box .moveable-control {
+  display: none;
+}
+
+.moveable-control-box.moveable-control-box-dragging {
+  border: none;
+}
