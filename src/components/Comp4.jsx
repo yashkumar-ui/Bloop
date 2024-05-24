@@ -33,7 +33,7 @@ const Comp4 = ({ setShowYoutube }) => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  onClick={closeHandler}
+                  onClick={closeHandler} onTouchStart={closeHandler}
                   className='mb-3 rounded-full flex items-center justify-center border-black sm:w-3 w-[1.2rem] h-[1.2rem] sm:h-3 bg-[#FF0000]'
                 >
                   <RxCross2

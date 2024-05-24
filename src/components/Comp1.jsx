@@ -51,7 +51,7 @@ const Comp1 = ({ onSelect, setShowImageGallery }) => {
                 <div className='w-full flex '>
                    <div className='flex  w-[45%] '>
                        <div className='flex gap-1 ' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <button onClick={closeHandler}  className='mb-3 rounded-full flex items-center justify-center border-black sm:w-3 w-[1.2rem] h-[1.2rem] sm:h-3 bg-[#FF0000] '> <RxCross2 className={ `w-3 transition-all duration-200 ${isHovered ? 'opacity-100' : 'opacity-0'}`} /> </button>
+                            <button onClick={closeHandler} onTouchStart={closeHandler}  className='mb-3 rounded-full flex items-center justify-center border-black sm:w-3 w-[1.2rem] h-[1.2rem] sm:h-3 bg-[#FF0000] '> <RxCross2 className={ `w-3 transition-all duration-200 ${isHovered ? 'opacity-100' : 'opacity-0'}`} /> </button>
                             <button className='mb-3 rounded-full border-black sm:w-3 w-[1.2rem] h-[1.2rem] sm:h-3 bg-[#FFEA00] flex justify-center items-center '> <RiSubtractLine className={`w-3 transition-all duration-200 ${isHovered ? 'opacity-100' : 'opacity-0'}`}/></button>
                             <button  className='mb-3 rounded-full border-black sm:w-3 w-[1.2rem] h-[1.2rem] sm:h-3 bg-[#7CFC00] flex justify-center items-center'> <MdCloseFullscreen  className={`w-3 transition-all duration-200 ${isHovered ? 'opacity-100' : 'opacity-0'}`}/> </button>
 
@@ -71,6 +71,7 @@ const Comp1 = ({ onSelect, setShowImageGallery }) => {
                           src={image}
                           alt="image"
                           onClick={() => handleClick(image)}
+                          onTouchStart={() => handleClick(image)}
                           className='w-full h-[9rem] rounded-md object-cover cursor-pointer'
                           />
                         ))}
