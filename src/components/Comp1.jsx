@@ -70,6 +70,7 @@ const Comp1 = ({ onSelect, setShowImageGallery }) => {
                           key={index}
                           src={image}
                           alt="image"
+                          loading='lazy'
                           onClick={() => handleClick(image)}
                           onTouchStart={() => handleClick(image)}
                           className='w-full h-[9rem] rounded-md object-cover cursor-pointer'

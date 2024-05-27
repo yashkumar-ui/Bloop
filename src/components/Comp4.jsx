@@ -4,7 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import { RiSubtractLine } from "react-icons/ri";
 import { MdCloseFullscreen } from "react-icons/md";
 
-//youtube component
+//youtube component2
 
 const Comp4 = ({ setShowYoutube }) => {
   const comp3Ref = useRef(null);
