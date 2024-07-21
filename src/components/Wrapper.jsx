@@ -14,6 +14,7 @@ import Comp4 from "./Comp4";
 import Comp5 from "./Comp5";
 
 
+
 function Wrapper() {
    
   const [dateTime , setDateTime ] = useState({ time : '' ,  date: '' , day: ''});
@@ -23,6 +24,7 @@ function Wrapper() {
   const [showSpotify, setShowSpotify] = useState(false);
   const [showYoutube, setShowYoutube] = useState(false);
   const[showTicTac , setShowTicTac] = useState(false);
+
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -50,6 +52,11 @@ function Wrapper() {
   const handleImageSelect = (image) => {
     setSelectedImage(image);
      
+  };
+
+  // handle the insta page 
+  const openInstagram = () => {
+    window.open("https://www.instagram.com/yash_iosdev/", "_blank");
   };
 
   const handleToggleImageGallery = () => {
@@ -103,7 +110,7 @@ function Wrapper() {
            </div>
 
            <div className="flex flex-col items-center gap-2">
-                <img className=" hover:scale-110 transition-all duration-200 cursor-pointer" src={instagram} width={55} ></img>
+                <img onClick={openInstagram} className=" hover:scale-110 transition-all duration-200 cursor-pointer" src={instagram} width={55} ></img>
                 <p className="text-white">Instagram</p>
            </div>
        </div>
@@ -129,9 +136,6 @@ function Wrapper() {
       {showYoutube && (
             <Comp4 setShowYoutube={setShowYoutube} />
       )}
-
-      
-
 
 
         <div className=" w-full  absolute z-50 py-3 bottom-1 flex  justify-center   ">
